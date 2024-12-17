@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handspeaks Project</title>
+    <link rel="stylesheet" href="styles.css">   
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-32x32.png">
+    <link rel="icon" href="images\favicon.ico">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">
+            <span class="highlight">H</span><span class="highlight">A</span>N<span class="highlight">D</span><span class="original">S</span>PEA<span class="highlight">K</span><span class="highlight">S</span>
+        </a>
+        <nav>
+            <ul class="navigation"> 
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="training.html">Training</a></li>
+                <li><a href="tracking.html">Tracking</a></li>
+                <li><a href="tutorials.html">Tutorials</a></li>
+                <li><a href="team.html">Our Team</a></li>
+            </ul>
+        </nav>
+        <div class="search-container">
+            <input type="text" placeholder="Search..." class="search-input">
+            <button class="search-button">
+                <ion-icon name="search-outline"></ion-icon>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section with Background Video -->
+    <section class="hero">
+        <video autoplay muted loop id="bg-video">
+            <source src="background-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hero-content">
+            <h1 class="dynamic-text" id="dynamic-text1">The Future of Interaction: Hand Gesture Smartwatch</h1>
+            <p class="dynamic-text" id="dynamic-text2">Control technology with just your hands. Intuitive, seamless, and smart.</p>
+            <p class="dynamic-text" id="dynamic-text3">Train and test the gesture recognition model for accuracy.</p>
+            <a href="tutorials.html" class="tutorial-link">
+                <button class="tutorial-button">
+                    Watch the Tutorials
+                    <span class="icon-container">
+                        <ion-icon name="arrow-forward-outline"></ion-icon> 
+                    </span>
+                </button>
+            </a>
+        </div>
+    </section>
+
+    <!-- Overview Section with Background Image -->
+    <section class="overview">
+        <div class="overview-content">
+            <h2>Overview of the Project</h2>
+            <p>Welcome to Handspeaks – a game-changing smartwatch that lets you control your devices with simple hand gestures. No buttons, no touchscreens – just you and your movements. This is more than just a smartwatch – it's the future of interaction, making technology feel more natural and intuitive.</p>
+
+            <p>Our system uses cutting-edge AI and sensor technology to understand your unique gestures. Whether you’re answering calls, changing music, or controlling apps, your hand movements are instantly recognized and translated into actions. The more you use it, the smarter it gets!</p>
+
+            <p>But we’re not stopping there. The Handspeaks project is just getting started. We’re working to integrate more devices, improve recognition accuracy, and expand the possibilities of gesture control. Imagine controlling your home, car, and more – all with just a flick of your wrist.</p>
+
+            <p>Handspeaks isn’t just about convenience; it’s about enhancing your experience with technology, making it more accessible, and putting you in control – effortlessly.</p>
+        </div>
+    </section>
+
+    <!-- How to Track Hand Gestures in Real-Time Section -->
+    <section class="real-time-tracking">
+        <div class="tracking-content">
+            <h2>How to Track Hand Gestures in Real-Time</h2>
+            <p>Our smartwatch tracks your hand gestures in real-time using advanced sensors like accelerometers and gyroscopes, combined with AI to translate movements into commands instantly. Watch the video to see how it works in action!</p>
+        
+            <div class="video-container">
+                <video controls>
+                    <source src="how-to-track-gestures.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

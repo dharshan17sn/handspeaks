@@ -1,0 +1,446 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #dee1e2;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+/* Logo Styling */
+.logo {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #333; /* Default color for the rest of the logo */
+}
+
+/* Highlighted letters' styles */
+.highlight {
+    color: #f39c12; /* Color for H, A, D, K, and the last S */
+}
+
+/* Original letter's styles */
+.original {
+    color: #333; /* Default color for S after D */
+}
+
+/* Header Styling */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.05);
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #333;
+    text-decoration: none; /* Removes underline */
+}
+
+/* Navigation Bar Styling */
+.navigation {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.navigation li a {
+    text-decoration: none;
+    font-size: 1em;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    position: relative;
+    padding: 8px 12px;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+/* Hover Effects for Navigation Links */
+.navigation li a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #007bff;
+    transition: width 0.3s ease-in-out;
+}
+
+.navigation li a:hover::after {
+    width: 100%; /* Full underline on hover */
+}
+
+.navigation li a:hover {
+    color: #007bff;
+}
+
+/* Highlight Current Page */
+.navigation li a.active {
+    background-color: #007bff; /* Highlight color */
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Search Bar Styling */
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    width: 200px;
+    padding: 8px 10px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    outline: none;
+    transition: width 0.3s ease-in-out;
+}
+
+.search-input:focus {
+    width: 300px;
+    border-color: #007bff;
+}
+
+.search-button {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.search-button:hover {
+    color: #007bff;
+}
+
+/* Mobile Menu Styling */
+.menu-toggle {
+    display: none;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .navigation {
+        display: none;
+        flex-direction: column;
+        background: #fff;
+        position: absolute;
+        top: 70px;
+        right: 30px;
+        width: 200px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+    }
+
+    .navigation.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .search-container {
+        display: none;
+    }
+}
+/* Tutorial Button Styling */
+.tutorial-button {
+    padding: 12px 25px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;  /* Adjust gap between text and icon */
+    transition: background-color 0.3s ease-in-out;
+}
+
+.tutorial-button:hover {
+    background-color: #0056b3;
+}
+
+/* Icon Container Styling */
+.icon-container {
+    font-size: 1.5em;    /* Adjust the icon size */
+    display: flex;
+    align-items: center;
+}
+
+/* Ionicon Styling */
+ion-icon {
+    vertical-align: middle; /* Aligns icon vertically with text */
+}
+
+
+
+/* New Overview Section Styling with Background Image */
+.overview {
+    background-image: url('your-image-path.jpg'); /* Replace with your actual image path */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.overview-content {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Adds a semi-transparent dark overlay for text visibility */
+    padding: 40px;
+    border-radius: 8px;
+}
+
+.overview h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.overview p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+/* Real-time Tracking Section Styling */
+.real-time-tracking {
+    background: #f4f7f9;
+    padding: 50px 20px;
+}
+
+.tracking-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.tracking-content h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.tracking-content p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.video-container {
+    margin-top: 30px;
+}
+
+.video-container video {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Hero Section Styling */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+}
+
+#bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.hero-content {
+    text-align: center;
+    color: white;
+    max-width: 80%;
+}
+
+.dynamic-text {
+    font-size: 2.5em;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeIn 3s ease-in-out forwards;
+}
+
+.dynamic-text:nth-child(1) {
+    animation-delay: 1s;
+}
+
+.dynamic-text:nth-child(2) {
+    animation-delay: 4s;
+}
+
+.dynamic-text:nth-child(3) {
+    animation-delay: 7s;
+}
+
+body {
+    padding-top: 60px; /* Adjust depending on your header size */
+}
+
+/* Team Section Styling */
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 50px 20px;
+    background-color: #fff;
+    margin-top: 100px; /* Ensure it's not hidden behind navigation */
+    box-sizing: border-box;
+}
+
+/* General Team Member Styling */
+.team-member {
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%; /* Ensure 3 members per row */
+    transition: transform 0.3s ease-in-out;
+}
+
+.team-member img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.team-member h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.team-member p {
+    font-size: 1.2em;
+    color: #666;
+}
+
+/* Hover effect for team members */
+.team-member:hover {
+    transform: translateY(-10px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .team-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .team-member {
+        width: 80%; /* Make team members take up more space on smaller screens */
+        margin-bottom: 20px;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Tutorial Button Styling */
+.tutorial-button {
+    padding: 12px 25px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-top: 30px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.tutorial-button:hover {
+    background-color: #0056b3;
+}
+
+/* Main Content Styling */
+main {
+    padding: 50px;
+}
+
+.project-details {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.project-details h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.project-details p {
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+/* Footer Placeholder (if needed) */
+footer {
+    background: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
